@@ -1,0 +1,292 @@
+:root {
+    --primary-color: #E66F51;
+    /* Cor primária alterada para Laranja (#E66F51) */
+    --text-color: #333;
+    --subtle-text: #666;
+    --border-color: #ddd;
+    --background-gray: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #fff;
+}
+
+.logo img {
+    height: 30px;
+}
+
+.userIcon img {
+    height: 40px;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+    /* Mantém a imagem na esquerda e o texto na direita */
+    flex-grow: 1;
+}
+
+.textColumn {
+    flex: 1;
+    padding: 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.textContainer {
+    max-width: 700px;
+}
+
+.title {
+    font-size: 1.7rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: var(--subtle-text);
+    margin-bottom: 40px;
+}
+
+/* Novo estilo para a seção de forma de atendimento */
+.serviceTypeSection {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.priceSection {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    border: 1px solid #C7C7C7;
+    border-radius: 3px;
+    width: 250px;
+    height: 30px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+/* Estilo para o select - a remoção das propriedades de "appearance" permite a seta nativa */
+.selectInput {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #555;
+    background-color: transparent;
+    cursor: pointer;
+    /* Linhas abaixo removidas para exibir a seta do navegador
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    */
+}
+
+.priceInput {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #555;
+    background-color: transparent;
+}
+
+.priceInput::placeholder {
+    color: #a0a0a0;
+}
+
+.currencyLabel {
+    font-size: 0.9rem;
+    color: #555;
+    white-space: nowrap;
+}
+
+/* Coluna da Imagem */
+.imageColumn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.characterImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    position: absolute;
+    bottom: -5px;
+    right: 5%;
+    /* Mantém a imagem posicionada para a direita dentro da sua coluna (que agora é a esquerda) */
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0px 20px 0px;
+    background-color: transparent;
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.progressBarContainer {
+    width: 100%;
+    height: 4px;
+    background-color: #E9E9E9;
+    margin-top: 20px;
+}
+
+.progressBar {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    /* Laranja (#E66F51) */
+}
+
+.footerButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0px 30px;
+}
+
+.footerButtons .backButton {
+    margin-right: auto;
+}
+
+.footerButtons .nextButton {
+    margin-left: auto;
+}
+
+.backButton {
+    background-color: transparent;
+    border: 1px solid #000000 ;
+    padding: 10px 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s ease-in;
+}
+
+.nextButton {
+    background-color: #f08a72;
+    border: 1px solid #f08a72;
+    padding: 10px 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.2s ease-in;
+}
+
+.backButton:hover {
+    color: #f08a72;
+    border-color: #f08a72;
+}
+
+.nextButton:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: #000000;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .mainContent {
+        flex-direction: column;
+    }
+
+    .textColumn {
+        padding: 30px 20px;
+    }
+
+    .imageColumn {
+        display: none;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .footerButtons {
+        padding: 0px 20px;
+    }
+
+    .backButton,
+    .nextButton {
+        padding: 12px 30px;
+    }
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 480px) {
+    .header {
+        padding: 12px 15px;
+    }
+
+    .textColumn {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+    }
+
+    .backButton,
+    .nextButton {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+
+    .footerButtons {
+        padding: 0px 15px;
+        gap: 10px;
+    }
+}

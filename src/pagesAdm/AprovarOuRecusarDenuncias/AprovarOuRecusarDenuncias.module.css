@@ -1,0 +1,96 @@
+/* Container principal da página */
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f0f2f5; /* Fundo cinza claro */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Wrapper para limitar a largura do conteúdo */
+.contentWrapper {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Título da página "Perfis denunciados" */
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #343a40;
+  margin: 0 0 24px 0;
+}
+
+/* Card da denúncia */
+.reportCard {
+  display: flex;
+  justify-content: space-between; /* Empurra a info do user e as ações para os lados opostos */
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Container da informação do usuário (foto + texto) */
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Espaço entre a foto e o bloco de texto */
+}
+
+/* Foto de perfil */
+.profilePic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Bloco de texto com nome e motivo */
+.reportText h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.reportText p {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* Container para os links de ação */
+.actionLinks {
+  display: flex;
+  flex-direction: column; /* Coloca os links um sobre o outro */
+  align-items: flex-end; /* Alinha os links à direita */
+  gap: 8px; /* Espaço entre os links */
+  white-space: nowrap; /* Impede que o texto dos links quebre */
+}
+
+/* Estilo base para os links */
+.approveLink, .rejectLink {
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.approveLink:hover, .rejectLink:hover {
+  opacity: 0.7;
+}
+
+/* Cores específicas */
+.approveLink {
+  color: #28a745; /* Verde */
+}
+
+.rejectLink {
+  color: #dc3545; /* Vermelho */
+}

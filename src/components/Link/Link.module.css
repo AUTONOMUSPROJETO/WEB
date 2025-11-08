@@ -1,0 +1,19 @@
+.link {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    transition:0.3s ease-in-out;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon_style > svg {
+    width: 27px;
+    height: 27px;
+}
+
+
+.link:hover{
+    color: #ffb85c;
+}

@@ -1,0 +1,581 @@
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  color: #333;
+  padding: 20px;
+  padding-bottom: 70px;
+}
+
+.menuConfiguracoes {
+  display: flex;
+}
+
+.esquerda {
+  width: 20%;
+}
+
+.direita {
+  width: 70%;
+}
+
+.cima {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.profileImageContainer {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #BF5E46;
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profileImageContainer:hover .overlay {
+  opacity: 1;
+}
+
+.profileImageContainer:hover .profileImage {
+  opacity: 0.7;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+}
+
+.infoLabel {
+  font-size: 16px;
+  color: #767676;
+  margin-bottom: 8px;
+}
+
+.infoUsuario {
+  border: 1px solid #BDBDBD;
+  border-radius: 7px;
+  padding: 15px;
+  word-break: break-word;
+}
+
+.nomeLocalizacao {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.nomeUsuario {
+  font-size: 20px;
+  margin: 0;
+  text-transform: uppercase;
+  word-break: break-word;
+}
+
+.tituloPrincipal {
+  font-size: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.secao {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 34.4px 0px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  padding-top: 9px;
+}
+
+.tituloSecao {
+  font-size: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+}
+
+.tituloInformacoes {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E66F51;
+}
+
+.badgeCliente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  background-color: #f0f0f0;
+  color: #666;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.listaMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.itemMenu {
+  padding: 20px 0 10px 10px;
+  cursor: pointer;
+  transition: color 0.3s, border-left-color 0.3s;
+  border-left: 3px solid #D5D5D5;
+}
+
+.itemMenu:last-child {
+  border-bottom: none;
+}
+
+.ativo {
+  border-left-color: #BF5E46;
+  padding-left: 10px;
+}
+
+.ativo a {
+  color: #BF5E46
+}
+
+.perfilCard {
+  padding: 20px;
+  padding-top: 0;
+  height: fit-content;
+  flex: 1;
+}
+
+.cabecalhoPerfil {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.seta {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tituloAvaliacoes {
+  font-size: 15px;
+  font-weight: 400;
+  color: #767676;
+}
+
+.avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.estrelas {
+  color: #25b4f1;
+  display: flex;
+  gap: 1px;
+}
+
+.estrelas img {
+  width: 18px;
+  height: 18px;
+}
+
+.nota {
+  font-weight: bold;
+}
+
+.data,
+.localizacao {
+  font-size: 14px;
+  color: #767676;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: #9D9D9D;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #BF5E46;
+}
+
+.changePasswordForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.passwordInputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.passwordInputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.passwordInput {
+  border: 1px solid #BDBDBD;
+  border-radius: 7px;
+  padding: 15px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.passwordInput::placeholder {
+  color: #767676;
+  font-size: 16px;
+}
+
+.saveButton {
+  background-color: transparent;
+  color: #E66F51;
+  border: none;
+  padding: 20px 5px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  align-self: flex-start;
+  transition: 0.2s ease-in;
+}
+
+.saveButton:hover {
+  color: #410000;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+
+  .menuConfiguracoes {
+    gap: 60px;
+  }
+
+  .esquerda {
+    width: 35%;
+  }
+
+  .direita {
+    width: 65%;
+  }
+
+  .cima {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .profileImageContainer {
+    width: 200px;
+    height: 200px;
+  }
+
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .tituloSecao {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .tituloPrincipal {
+    font-size: 22px;
+  }
+
+  .estrelas img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .passwordInputGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .saveButton {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .menuConfiguracoes {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .esquerda,
+  .direita {
+    width: 100%;
+  }
+
+  .cima {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profileImageContainer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .nomeLocalizacao {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .nomeUsuario {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tituloSecao {
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .tituloPrincipal {
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .tituloInformacoes {
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .secao {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .itemMenu {
+    padding: 15px 0 8px 8px;
+  }
+
+  .perfilCard {
+    padding: 15px;
+  }
+
+  .avaliacao {
+    justify-content: center;
+  }
+
+  .estrelas img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .data {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  .profileImageContainer {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nomeUsuario {
+    font-size: 16px;
+  }
+
+  .tituloSecao {
+    font-size: 18px;
+  }
+
+  .tituloPrincipal {
+    font-size: 18px;
+  }
+
+  .tituloInformacoes {
+    font-size: 16px;
+  }
+
+  .secao {
+    padding: 12px;
+  }
+
+  .infoUsuario {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .badgeCliente {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .itemMenu {
+    padding: 12px 0 6px 6px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .estrelas img {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    padding: 30px;
+  }
+
+  .menuConfiguracoes {
+  }
+
+  .profileImageContainer {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  border: 1px solid #BDBDBD;
+  border-radius: 7px;
+  padding: 15px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.dangerSection {
+  margin-top: 20px;
+}
+
+.alertText {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.alertTitle {
+  color: #F44336;
+  font-weight: bold;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #F44336;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 16px;
+  transition: 0.2s ease-in;
+}
+
+.deleteButton:hover {
+  color: #0e0504;
+  ;
+}
+
+
+@media (max-width: 1024px) {
+  .formGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

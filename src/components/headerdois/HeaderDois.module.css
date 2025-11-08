@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.0rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 3rem;
+    flex-direction: row;
+}
+.caixa1 {
+    width: 100%;
+    flex: 50%;
+
+}
+.caixa2 {
+    width: 100%;
+    flex: 50%;
+    
+}
+.logo {
+    margin-top: 0.7rem;
+    width: 3rem;
+}
+

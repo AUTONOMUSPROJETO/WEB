@@ -1,0 +1,209 @@
+/* Container principal com gradiente sutil */
+.container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Wrapper do conteúdo */
+.contentWrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 1024px) {
+    .contentWrapper {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 100px;
+        padding: 0 60px;
+    }
+}
+
+/* Seção de texto moderna */
+.textSection {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+
+/* Elemento decorativo */
+.decorativeElement {
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #FFD700, #FFC107);
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Título com gradiente */
+.titleGradient {
+    font-size: clamp(48px, 8vw, 84px);
+    font-weight: 800;
+    line-height: 1.1;
+    background: #FFBF0B;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.titleGradient span {
+    background-color: #000000;
+    border: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Descrições modernas */
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #475569;
+    font-weight: 400;
+    margin: 0;
+    position: relative;
+}
+
+.description:first-of-type {
+    font-size: 20px;
+    color: #334155;
+}
+
+.description strong {
+    color: #FFC107;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    
+    .description:first-of-type {
+        font-size: 18px;
+    }
+}
+
+/* Botão call-to-action */
+.ctaButton {
+    margin-top: 20px;
+}
+
+.ctaButton button {
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ctaButton button:hover {
+    transform: translateY(-2px);
+}
+
+/* Seção da imagem com card flutuante */
+.imageSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.floatingCard {
+    position: relative;
+    border-radius: 24px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.floatingCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Efeitos adicionais para desktop */
+@media (min-width: 1024px) {
+    .textSection {
+        padding-right: 40px;
+    }
+    
+    .imageSection::before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        right: -10%;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(45deg, #FFD700, #FFC107);
+        border-radius: 50%;
+        opacity: 0.05;
+        z-index: -1;
+    }
+    
+    .imageSection::after {
+        content: '';
+        position: absolute;
+        bottom: 10%;
+        left: -15%;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(45deg, #FFEB3B, #FBC02D);
+        border-radius: 50%;
+        opacity: 0.05;
+        z-index: -1;
+    }
+}
+
+.floatingCard {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Responsividade melhorada */
+@media (max-width: 640px) {
+    .container {
+        padding: 60px 0;
+    }
+    
+    .contentWrapper {
+        padding: 0 16px;
+        gap: 40px;
+    }
+    
+    .decorativeElement {
+        display: none;
+    }
+    
+    .floatingCard {
+        padding: 16px;
+        border-radius: 20px;
+    }
+}

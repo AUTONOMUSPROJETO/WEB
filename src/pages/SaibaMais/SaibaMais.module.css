@@ -1,0 +1,272 @@
+/* SaibaMais.module.css */
+
+/* VARIÁVEIS DE COR */
+:root {
+    --color-primary-yellow: #ffc107; /* Amarelo principal do fundo */
+    --color-light-yellow: #ffe082; /* Amarelo da 'Bolha' do título */
+    --color-dark: #333;
+    --color-text-light: #555;
+    --color-red: #ef4444;
+    --color-amber: #f59e0b;
+    --color-blue: #3b82f6;
+    --color-purple: #a855f7;
+    --color-green: #10b981;
+}
+
+/* UTILIDADES E LAYOUT BÁSICO */
+.maxWidthContainer {
+    max-width: 1280px; /* max-w-7xl */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* SEÇÃO AMARELA DE FUNDO GERAL */
+.sectionYellow {
+    background-color: var(--color-primary-yellow);
+    padding: 6rem 0; 
+}
+
+/* CONTAINER E ESTILO DO PRIMEIRO TÍTULO (BOLHA AMARELA) */
+.titleMainContainer {
+    position: relative; 
+    display: inline-block; 
+    padding: 2.5rem 4rem; 
+    border-radius: 70px 90px 70px 90px / 90px 70px 90px 70px;
+    background-color: var(--color-light-yellow); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    max-width: 90%; 
+}
+
+.titleMain {
+    font-size: 2.8rem; 
+    font-weight: 800;
+    line-height: 1.2; 
+    color: var(--color-dark);
+    text-align: left; 
+    margin: 0; 
+}
+
+/* Estilo para títulos secundários (Como Funciona, Áreas) */
+.sectionTitle {
+    font-size: 2.25rem; /* 3xl */
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--color-dark);
+}
+
+
+/* SEÇÃO DE CONTEÚDO BRANCO (Conectamos Talentos / Por que escolher) */
+.sectionContent {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) { /* lg */
+    .contentGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.contentTitle {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-dark);
+}
+
+.contentSubtitle {
+    font-size: 1.25rem; /* 2xl */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--color-dark);
+}
+
+.textParagraph {
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.listUl {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.listCheck {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.listCheck li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+}
+
+.checkIcon {
+    color: var(--color-green);
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    line-height: 1;
+}
+
+/* --- SEÇÃO IMAGENS FINAIS --- */
+
+/* Coluna da Esquerda: Imagem do Usuário com fundo oval */
+.imageWrapperUser {
+    position: relative;
+    height: 350px; 
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+
+    /* Cria a bolha amarela atrás da imagem */
+    background-color: var(--color-primary-yellow); 
+    border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%; 
+}
+
+/* Garante que a imagem do usuário seja exibida sem ser cortada */
+.imageWrapperUser img {
+    width: 100%; 
+    max-height: 100%; 
+    object-fit: contain; 
+    position: absolute;
+    bottom: 0; /* Alinha a base da imagem do boneco com a base do container */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Coluna da Direita: Mockups do App (Sem fundo oval) */
+.imageWrapperApp {
+    position: relative;
+    height: 380px; 
+    margin-top: 2rem;
+    overflow: visible; 
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end; 
+}
+
+/* Garante que a imagem do mockup seja exibida corretamente */
+.imageWrapperApp img {
+    width: 100%; 
+    height: auto;
+}
+
+/* SEÇÃO COMO FUNCIONA (Passos/Bolhas) */
+.sectionHowItWorks {
+    padding: 4rem 0;
+    background-color: #f9fafb; /* gray-50 */
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.howItWorksGrid {
+    display: flex; /* CRÍTICO: Layout horizontal dos passos */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 2rem;
+}
+
+.stepItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    max-width: 10rem;
+}
+
+.stepIconContainer {
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepCircleBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--color-primary-yellow);
+    opacity: 0.7;
+}
+
+.stepCircleFront {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #ffb300; 
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepNumber {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.stepText {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+    line-height: 1.4;
+}
+
+
+/* ÁREAS DE SERVIÇO */
+.areasGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.areaItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 8rem;
+}
+
+.areaIcon {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+}
+
+.areaName {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+/* Cores das Áreas */
+.red { color: var(--color-red); }
+.amber { color: var(--color-amber); }
+.blue { color: var(--color-blue); }
+.purple { color: var(--color-purple); }
+.green { color: var(--color-green); }

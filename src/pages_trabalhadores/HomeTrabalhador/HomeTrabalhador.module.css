@@ -1,0 +1,62 @@
+.container {
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+.mainContent {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+
+.welcomeSection {
+    text-align: left;
+    margin-bottom: 3rem;
+}
+
+.welcomeSection h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.welcomeSection p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.configButton {
+    background-color: #A0CEE1;
+    color: #000000;
+    border: 1px solid #A0CEE1;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.configButton:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.cardsSection {
+    text-align: left;
+}
+
+.cardsSection h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.cardList {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}

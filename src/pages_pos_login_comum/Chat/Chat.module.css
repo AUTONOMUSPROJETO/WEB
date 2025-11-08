@@ -1,0 +1,395 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.mainContainer {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    border-top: 1px solid #e0e0e0;
+}
+
+.sidebar {
+    width: 320px;
+    background-color: white;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarMobile {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarHeader {
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebarHeaderMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebarTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.searchContainer {
+    position: relative;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 8px 16px 8px 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+}
+
+.tabActive {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-bottom: 2px solid #f59e0b;
+}
+
+.contactsList {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.contactItem,
+.contactItemSelected {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: background-color 0.2s;
+}
+
+.contactItem:hover {
+    background-color: #f9f9f9;
+}
+
+.contactItemSelected {
+    background-color: #fef3c7;
+    border-left: 4px solid #f59e0b;
+}
+
+.contactAvatar {
+    width: 48px;
+    height: 48px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.contactInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.contactHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.contactName {
+    font-weight: 500;
+    color: #111;
+    margin: 0;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.contactTime {
+    font-size: 12px;
+    color: #666;
+}
+
+.contactMessage {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.unreadDot {
+    width: 12px;
+    height: 12px;
+    background-color: #f59e0b;
+    border-radius: 50%;
+}
+
+.chatArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatHeader {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.chatAvatar {
+    width: 40px;
+    height: 40px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.chatUserInfo {
+    flex: 1;
+}
+
+.chatUserName {
+    font-weight: 500;
+    color: #111;
+    margin: 0;
+    font-size: 16px;
+}
+
+.chatUserStatus {
+    font-size: 14px;
+    color: #10b981;
+    margin: 0;
+}
+
+.messagesContainer {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.messageWrapper {
+    display: flex;
+}
+
+.messageWrapperMe {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.messageBubble {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+.messageBubbleMe {
+    background-color: #f59e0b;
+    color: white;
+    border-bottom-right-radius: 4px;
+}
+
+.messageBubbleOther {
+    background-color: #374151;
+    color: white;
+    border-bottom-left-radius: 4px;
+}
+
+.messageText {
+    font-size: 14px;
+    margin: 0;
+}
+
+.messageTime {
+    font-size: 12px;
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+.inputContainer {
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    padding: 16px;
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.messageInput {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    outline: none;
+    font-size: 14px;
+    resize: none;
+    min-height: 48px;
+    max-height: 120px;
+    overflow-y: auto;
+    font-family: inherit;
+}
+
+.sendButton,
+.sendButtonDisabled {
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sendButton {
+    background-color: #f59e0b;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.sendButton:hover {
+    background-color: #d97706;
+}
+
+.sendButtonDisabled {
+    background-color: #d1d5db;
+    color: white;
+    cursor: not-allowed;
+}
+
+.emptyState {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+.emptyStateContent {
+    text-align: center;
+}
+
+.emptyStateIcon {
+    width: 64px;
+    height: 64px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.menuButton {
+    padding: 8px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.chatUserInfoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.backButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.backButton:hover {
+    background-color: #f3f4f6;
+}

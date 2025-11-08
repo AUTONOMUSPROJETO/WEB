@@ -1,0 +1,77 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 25px;
+
+}
+
+.sub_menu{
+    width: 100%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translate(0);
+}
+
+.sub_menu_closed{
+    transition: all 1s ease;
+    transform: translate(-100%);
+}
+
+.no_style{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+.logo {
+    width: 3rem;
+}
+
+.icon_hamburguer {
+    width: 2rem;
+}
+
+.menu_container {
+    position: absolute;
+    width: 100vw;
+    height: 100svh;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+
+.menu_header{
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+}
+
+.menu_header svg{
+    height: 55px;
+}
+
+.menu_content{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 60px 35px;
+    gap: 20px;
+}
+
+.menu_content button{
+    width: 100%;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+

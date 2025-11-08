@@ -1,0 +1,76 @@
+/* Container principal da página */
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f0f2f5; /* Fundo cinza claro */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Wrapper para limitar a largura do conteúdo */
+.contentWrapper {
+  width: 100%;
+  max-width: 900px; /* Largura máxima para o conteúdo */
+}
+
+/* Título da página "Perfis denunciados" */
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #343a40;
+  margin: 0 0 24px 0; /* Espaçamento abaixo do título */
+}
+
+/* Card da denúncia */
+.reportCard {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Espaço entre os elementos (foto, texto, link) */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Foto de perfil */
+.profilePic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Container para o nome e a mensagem */
+.reportContent {
+  flex-grow: 1; /* Faz este container ocupar o espaço disponível */
+}
+
+.reportContent h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.reportContent p {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+/* Link "RESPONDER" */
+.replyLink {
+  color: #fecb3e; /* Cor amarela/dourada */
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap; /* Impede que o texto quebre em duas linhas */
+  transition: color 0.2s ease;
+}
+
+.replyLink:hover {
+  color: #fdb913; /* Um pouco mais escuro no hover */
+}

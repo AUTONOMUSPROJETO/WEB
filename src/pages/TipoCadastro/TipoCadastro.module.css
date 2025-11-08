@@ -1,0 +1,42 @@
+.corpo {
+    height: 94.3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    height: 60vh;
+}
+
+.caixa2 {
+    display: flex;
+    height: 34vh;
+    justify-content: center;
+}
+
+.dentrocaixa2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dentrocaixa2 p {
+  color: #666;  
+}
+
+.dentrocaixa2 a {
+    color: #FFC100;
+    transition: color 0.3s ease;
+}
+
+.dentrocaixa2 a:hover {
+    color: #000000;
+}
+
+.dentrocaixa2 a,
+.dentrocaixa2 p {
+    text-decoration: none;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+}

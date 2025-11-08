@@ -1,0 +1,33 @@
+.card {
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease-in-out;
+  flex: 1 1 250px; /* Adicione ou ajuste esta linha */
+  max-width: 250px; /* Mantenha esta linha */
+}
+.card:hover {
+  transform: translateY(-5px);
+  /* Use a CSS variable for the background color */
+  background-color: var(--hover-bg-color, #eed4cf); 
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}

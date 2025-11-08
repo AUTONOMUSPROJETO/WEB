@@ -1,0 +1,32 @@
+.btn, .outroBtn {
+    min-width: 170px; /* menor que antes */
+    width: auto;
+    height: 2.7rem; /* menor que 3.2rem */
+    padding: 0 40px; /* menos espaço interno */
+    font-size: 0.98rem; /* fonte menor */
+    border-radius: 5px; /* menos arredondado */
+    border: none;
+    background-color: #FFC300;
+    color: #000;
+    transition: 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.btn:hover, .outroBtn:hover {
+    background-color: #000;
+    color: #fff;
+        transform: translateY(-2px);
+}
+
+@media screen and (max-width: 1024px) {
+    .btn, .outroBtn {
+        min-width: 180px;
+        height: 3rem;
+        padding: 0 12px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,319 @@
+.container {
+    margin-bottom: 90px;
+}
+
+.mainContent {
+    margin-bottom: 60px;
+}
+
+.statsSection {
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #DAEBF5, #E1F0F7);
+    padding: 5px 30px;
+    border-radius: 10px;
+}
+
+.statsTitle {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #334E6F;
+}
+
+.statsSubtitle {
+    font-size: 10px;
+    color: #6C8CAE;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+    padding: 20px 0px;
+}
+
+.statCard {
+    background-color: #334E6F;
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cardTitle {
+    font-size: 16px;
+    color: #A3C1DA;
+    font-weight: 500;
+}
+
+.cardValue {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cardChange {
+    font-size: 14px;
+    color: #63C1D2;
+    margin-top: 5px;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.section {}
+
+.sectionHeader {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sectionHeader h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #000000;
+}
+
+.editIcon {
+    cursor: pointer;
+    color: #000000;
+}
+
+.tagsContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    border: 1px solid #DBDBDB;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.tag {
+    background-color: #F0EFF1;
+    color: #777777;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.descriptionContent {
+    border: 1px solid #DBDBDB;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.descriptionContent p,
+.descriptionContent ul {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.descriptionContent h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.checkedItem {
+    margin-right: 8px;
+    color: #000000;
+}
+
+.bottomSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.inputGroup {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.inputField {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #DBDBDB;
+}
+
+.inputField input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    width: 100px;
+    text-align: center;
+}
+
+.inputField span {
+    font-size: 14px;
+}
+
+.selectField {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #DBDBDB;
+    font-size: 16px;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+
+.actionItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 14px;
+    border-radius: 13px;
+    margin-bottom: 10px;
+    background-color: #F0EFF1;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    color: #333;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.actionItem:hover {
+    background-color: #c9c9c9;
+}
+
+.actionItem:active {
+    transform: scale(0.98);
+}
+
+.statusBox {
+    background-color: #C9EFFF;
+    padding: 4px;
+    border-radius: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 120px;
+}
+
+.statusText {
+    font-size: 14px;
+}
+
+.btnSave{
+    background-color: transparent;
+    color: #6C8CAE;
+    transition: 0.2s ease-in-out;
+    border: none;
+    font-size: 16px;
+}
+
+.btnSave:hover{
+    color: #334E6F;
+}
+
+
+/* --- Responsiveness for Mobile Devices --- */
+@media (max-width: 768px) {
+    /* Main layout adjustments */
+    .mainContent {
+        grid-template-columns: 1fr; /* Stack columns on a single line */
+    }
+
+    /* Stats section adjustments */
+    .statsSection {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .statsGrid {
+        grid-template-columns: 1fr 1fr; /* Two cards per row */
+        gap: 10px; /* Reduce the gap */
+    }
+
+    .statCard {
+        padding: 15px; /* Adjust padding for cards */
+    }
+
+    .cardTitle {
+        font-size: 12px; /* Make the title smaller */
+    }
+
+    .cardValue {
+        font-size: 18px; /* Make the value smaller */
+    }
+
+    /* Adjusting sections and buttons */
+    .bottomSection {
+        grid-template-columns: 1fr; /* Stack the input groups */
+    }
+
+    .btnSave {
+        width: 100%; /* Make the save button full width */
+        margin-top: 20px; /* Add some space above the button */
+        margin-bottom: 20px;
+    }
+
+    .rightColumn {
+        flex-direction: column-reverse; /* Put details card on top, status box at bottom */
+    }
+}
+
+/* --- Responsiveness for Tablets and smaller Laptops --- */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    }
+}

@@ -1,0 +1,139 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.titulo {
+  text-align: center;
+  color: #000;
+  margin-bottom: 20px;
+  font-size: clamp(1.2rem, 4vw, 1.5rem); /* Tamanho responsivo */
+  line-height: 1.3;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  position: relative;
+  min-height: 60px;
+}
+
+.card:hover {
+  border-color: #000000;
+}
+
+.selecionado {
+  border-color: #000000;
+  background-color: #f8f8f8;
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.iconeContainer {
+  border-radius: 50%;
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: #f0f0f0;
+}
+
+.icone {
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+.texto {
+  font-size: clamp(0.9rem, 3.5vw, 1rem); /* Tamanho responsivo */
+  color: #4a5568;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 30px; /* Espaço para o radio */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 2px solid #cbd5e0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.selecionado::before {
+  border-color: #000000;
+  background-color: #FFC100;
+}
+
+
+
+@media (max-width: 400px) {
+  .container {
+    padding: 15px;
+  }
+  
+  .card {
+    padding: 10px 12px;
+    min-height: 55px;
+  }
+  
+  .iconeContainer {
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .icone {
+    font-size: 1rem;
+  }
+  
+  .texto {
+    white-space: normal; 
+    padding-right: 25px;
+  }
+  
+  .card::before {
+    right: 12px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 15px 20px;
+  }
+}

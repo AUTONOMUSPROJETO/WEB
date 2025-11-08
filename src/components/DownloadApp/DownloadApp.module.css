@@ -1,0 +1,77 @@
+.downloadApp {
+  background-color: #FFC107;
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  text-align: left;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.googlePlayButton, .appStoreButton {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.googlePlayButton:hover, .appStoreButton:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
+
+.phoneMockup {
+  width: 140%;
+  height: auto;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .downloadApp {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 4rem 1rem;
+  }
+  .content {
+    max-width: 100%;
+  }
+  .buttons {
+    justify-content: center;
+  }
+  .imageContainer {
+    max-width: 300px;
+  }
+}
